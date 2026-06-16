@@ -1,0 +1,37 @@
+pie_bench:
+  data_root: .data
+  mapping_file: .data/mapping_file.json
+  src_image_folder: .data/annotation_images
+
+output:
+  root: ./runs/release_selfix_reconstruction
+  result_dir: results
+  image_dir: images
+  feature_dir: features
+  skip_existing: true
+
+evaluation:
+  device: cuda
+  metrics: []
+
+selfix:
+  name: flux-dev
+  method: selfix
+  num_steps: 15
+  num_iterations: 10
+  window_size: 1
+  momentum: 0.5
+  alpha1: 0.5
+  delta: 0.125
+  initialization: clone
+  guidance: 1
+  inject_steps: 0
+  start_layer: 0
+  end_layer: 37
+  reuse_v: 1
+  editing_strategy: replace_v
+  qkv_ratio: 1,1,1
+  offload: false
+  seed: 0
+  save_trace: false
+  enable_nsfw_filter: false

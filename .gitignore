@@ -1,0 +1,61 @@
+# Python caches and package metadata
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+
+# Example images and results
+src/examples/**/*.jpg
+src/examples/**/*.png
+
+# Dataset images
+dataset/dci_images/*.jpg
+
+# Additional patterns for nested directories
+src/examples/**/**/*.jpg
+src/examples/**/**/*.png
+src/examples/**/**/**/*.jpg
+src/examples/**/**/**/*.png
+src/examples/**/**/**/**/*.jpg
+src/examples/**/**/**/**/*.png
+
+.data
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Local experiment outputs
+logs/
+logs
+src/logs/
+output/
+output*/
+runs/
+src/output/
+features/
+feature/
+latents/
+trajectories/
+trace/
+images/
+results/
+
+# Generated experiment artifacts
+*.pt
+*.pth
+*.safetensors
+*.npz
+*.npy
+*.jpg.tmp
+*.png.tmp
+
+# Local drafts and scratch files
+*.pdf
+temp.*
+src/temp.py
+src/temp.png
+.vscode/
+dci_image_gen*
+src/dci_first_1000_dummy.json

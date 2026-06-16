@@ -1,0 +1,45 @@
+pie_bench:
+  data_root: .data
+  mapping_file: .data/mapping_file.json
+  src_image_folder: .data/annotation_images
+
+output:
+  root: ./runs/release_selfix_editing
+  result_dir: results
+  image_dir: images
+  feature_dir: features
+  skip_existing: true
+
+evaluation:
+  device: cuda
+  metrics:
+    - structure_distance
+    - psnr_unedit_part
+    - lpips_unedit_part
+    - mse_unedit_part
+    - ssim_unedit_part
+    - clip_similarity_source_image
+    - clip_similarity_target_image
+    - clip_similarity_target_image_edit_part
+
+selfix:
+  name: flux-dev
+  method: selfix
+  num_steps: 15
+  num_iterations: 4
+  window_size: 1
+  momentum: 0.1
+  alpha1: 0.5
+  delta: 2.0
+  initialization: clone
+  guidance: 2
+  inject_steps: 1
+  start_layer: 0
+  end_layer: 37
+  reuse_v: 1
+  editing_strategy: replace_v
+  qkv_ratio: 1,1,1
+  offload: false
+  seed: 0
+  save_trace: false
+  enable_nsfw_filter: false

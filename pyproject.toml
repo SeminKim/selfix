@@ -1,0 +1,86 @@
+[project]
+name = "selfix"
+authors = [
+  { name = "Semin Kim" },
+  { name = "Jihwan Yoon" },
+  { name = "Seunghoon Hong" },
+]
+description = "Official code for SelFix: Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dynamic = ["version"]
+dependencies = [
+  "torch>=2.7,<2.8",
+  "torchvision>=0.22,<0.23",
+  "torchmetrics",
+  "einops",
+  "fire >= 0.6.0",
+  "huggingface-hub>=0.34.0,<1.0",
+  "matplotlib",
+  "pillow",
+  "safetensors",
+  "sentencepiece",
+  "transformers>=4.44,<5",
+  "tokenizers",
+  "protobuf",
+  "PyYAML",
+  "requests",
+  "tqdm",
+  "invisible-watermark",
+  "numpy>=1.25.2,<2",
+]
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=77", "wheel", "setuptools_scm>=8"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+extend-exclude = ["/usr/lib/*"]
+
+[tool.ruff.lint]
+ignore = [
+  "E501", # line too long - will be fixed in format
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+known-local-folder = ["src"]
+known-first-party = ["flux"]
+
+[tool.pyright]
+include = ["src"]
+exclude = [
+  "**/__pycache__", # cache directories
+  "./typings",      # generated type stubs
+]
+stubPath = "./typings"
+
+[tool.tomlsort]
+in_place = true
+no_sort_tables = true
+spaces_before_inline_comment = 1
+spaces_indent_inline_array = 2
+trailing_comma_inline_array = true
+sort_first = [
+  "project",
+  "build-system",
+  "tool.setuptools",
+]
+
+# needs to be last for CI reasons
+[tool.setuptools_scm]
+parentdir_prefix_version = "selfix-"
+fallback_version = "0.0.0"
+version_scheme = "post-release"
