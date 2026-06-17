@@ -1,6 +1,6 @@
 # SelFix: Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness
 
-[![Paper](https://img.shields.io/badge/arXiv-2606.00000-b31b1b.svg)](https://arxiv.org/abs/2606.00000)
+[![Paper](https://img.shields.io/badge/arXiv-2606.17584-b31b1b.svg)](https://arxiv.org/abs/2606.17584)
 
 This repository contains the code for SelFix: Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness.
 SelFix is a fixed-point inversion method that selects an inversion trajectory to be as straight as possible, improving rectified-flow inversion.
@@ -177,9 +177,9 @@ If you find this work helpful, please cite:
       title={Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness},
       author={Semin Kim and Jihwan Yoon and Seunghoon Hong},
       year={2026},
-      eprint={2606.00000},
+      eprint={2606.17584},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2604.00000},
+      url={https://arxiv.org/abs/2606.17584},
 }
 ```
