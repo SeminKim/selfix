@@ -1,4 +1,4 @@
-# SelFix: Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness
+# SelFix: Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness (NeurIPS'26)
 
 [![Paper](https://img.shields.io/badge/arXiv-2606.17584-b31b1b.svg)](https://arxiv.org/abs/2606.17584)
 
@@ -29,8 +29,8 @@ Then install SelFix inside the container:
 
 ```shell
 cd /workspace
-git clone https://github.com/SeminKim/selfix-inversion
-cd selfix-inversion
+git clone https://github.com/SeminKim/selfix
+cd selfix
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install -e .
 ```
@@ -173,13 +173,10 @@ We sincerely appreciate the release of these projects.
 If you find this work helpful, please cite:
 
 ```bibtex
-@misc{kim2026rootselecting,
-      title={Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness},
-      author={Semin Kim and Jihwan Yoon and Seunghoon Hong},
-      year={2026},
-      eprint={2606.17584},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2606.17584},
+@inproceedings{kim2026rootselecting,
+  title={Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness},
+  author={Kim, Semin and Yoon, Jihwan and Hong, Seunghoon},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2026}
 }
 ```
